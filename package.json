@@ -12,7 +12,11 @@
     "dist": "dist/"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "docs:dev": "docz dev",
+    "docs:build": "docz build",
+    "docs:serve": "docz build && docz serve",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -70,6 +74,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.7",
+    "docz": "^2.3.1",
     "react-router-dom": "^5.2.0"
   }
 }

@@ -1,3 +1,7 @@
+---
+name: Getting Started
+---
+
 # Installation
 
 To use teemsly rigel-ui you can install by `npm` or `yarn`

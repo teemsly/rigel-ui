@@ -13,12 +13,11 @@
   },
   "scripts": {
     "test": "jest",
-    "docs:dev": "docz dev",
-    "docs:build": "docz build",
-    "docs:serve": "docz build && docz serve",
     "dev:component": "gulp devComponent",
     "dev:style": "gulp devStyle",
-    "build": "gulp build"
+    "build": "gulp build",
+    "docs:dev": "start-storybook -p 6006",
+    "docs:build": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -61,10 +60,15 @@
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
     "@babel/runtime": "^7.13.17",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/jest": "^26.0.22",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -80,7 +84,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "docz": "^2.3.1",
+    "classnames": "^2.3.1",
     "react-router-dom": "^5.2.0"
   }
 }

@@ -4,8 +4,7 @@
 
   &.#{$class-prefix}section-collapsible {
     .#{$class-prefix}section-header {
-      .#{$class-prefix}section-heading,
-      .#{$class-prefix}section-custom-heading {
+      .#{$class-prefix}section-heading-content {
         cursor: pointer;
       }
     }

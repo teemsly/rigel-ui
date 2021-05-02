@@ -22,4 +22,6 @@ const SectionBody: React.FC<SectionBodyProps> = (props: SectionBodyProps) => {
   );
 };
 
+SectionBody.displayName = "SectionBody";
+
 export default SectionBody;

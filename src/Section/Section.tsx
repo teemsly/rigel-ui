@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = (props: SectionProps) => {
     customElement: Component = "div",
     children,
     className,
-    collapsible = false,
+    collapsible,
     onCollapsible,
     isCollapse,
     ...rest
@@ -33,11 +33,9 @@ const Section: React.FC<SectionProps> = (props: SectionProps) => {
     addClassNames({ collpased: collapse, collapsible: collapsible })
   );
 
-  const handleCollapse = () => {
-    setCollapse(!collapse);
-    if (onCollapsible) {
-      onCollapsible?.(collapse);
-    }
+  const handleCollapse = (isCollapse: boolean) => {
+    setCollapse(isCollapse);
+    onCollapsible?.(isCollapse);
   };
 
   const getChildElements = () => {
@@ -45,12 +43,11 @@ const Section: React.FC<SectionProps> = (props: SectionProps) => {
       children,
       (child: any, index: number) => {
         let displayName = child?.type?.displayName;
-
         if (displayName === "SectionHeader") {
           return React.cloneElement(child, {
             key: index,
             collapsible: collapsible,
-            handleCollapse: handleCollapse,
+            toggleCollapse: () => handleCollapse(!collapse),
             ...child?.props,
           });
         }

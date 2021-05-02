@@ -61,7 +61,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = (
     heading,
     renderHeading,
     extraElements,
-    handleCollapse,
+    toggleCollapse,
     isCollapse,
     onCollapsible,
     collapsible,
@@ -73,16 +73,18 @@ const SectionHeader: React.FC<SectionHeaderProps> = (
   const classes = mergeClassName(className, addClassNames());
 
   let headingProps: any = {};
-  if (handleCollapse) {
+  if (collapsible) {
     headingProps = {
-      onClick: handleCollapse,
+      onClick: toggleCollapse,
     };
   }
+
   let getHeading: string | React.ReactNode = (
     <SectionHeading>
       <SectionHeadingContent {...headingProps}>{heading}</SectionHeadingContent>
     </SectionHeading>
   );
+
   if (renderHeading) {
     getHeading = (
       <SectionCustomHeading>
@@ -93,18 +95,15 @@ const SectionHeader: React.FC<SectionHeaderProps> = (
     );
   }
 
-  let collapseElement: React.ReactNode;
-  if (collapsible) {
-    collapseElement = <SectionCollapse onClick={handleCollapse} />;
-  }
-
   return (
     <Component className={classes} {...rest}>
-      {collapseElement}
+      {collapsible && <SectionCollapse onClick={toggleCollapse} />}
       {getHeading}
       <SectionHeadingExtraElements>{extraElements}</SectionHeadingExtraElements>
     </Component>
   );
 };
+
+SectionHeader.displayName = "SectionHeader";
 
 export default SectionHeader;

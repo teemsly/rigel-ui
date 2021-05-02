@@ -13,5 +13,5 @@ const Section = SectionComponent as Section;
 Section.Header = SectionHeader;
 Section.Body = SectionBody;
 
+export type { SectionProps } from "./Section";
 export default Section;
-export { SectionProps } from "./Section";

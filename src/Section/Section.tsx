@@ -35,7 +35,9 @@ const Section: React.FC<SectionProps> = (props: SectionProps) => {
 
   const handleCollapse = () => {
     setCollapse(!collapse);
-    onCollapsible?.(collapse);
+    if (onCollapsible) {
+      onCollapsible?.(collapse);
+    }
   };
 
   const getChildElements = () => {

@@ -62,6 +62,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = (
     renderHeading,
     extraElements,
     handleCollapse,
+    isCollapse,
+    onCollapsible,
     collapsible,
     ...rest
   } = props;

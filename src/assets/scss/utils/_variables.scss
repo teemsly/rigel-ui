@@ -1,0 +1,29 @@
+$class-prefix: ts-;
+
+// Text Colors
+$text: #151b26;
+$text-deprecated: #273240;
+$text-weak: #6f7782;
+$text-weak-hover: #151b26;
+$text-disabled: #9ca6af;
+
+// Colors
+$color-white: #ffffff;
+$color-primary: #2b2661;
+
+// Padding
+$padding-top: 24px;
+$padding-right: 24px;
+$padding-bottom: 24px;
+$padding-left: 24px;
+
+$padding-x: 24px;
+$padding-y: 24px;
+
+// Border Radius
+$border-radius: 6px;
+
+// Section
+$section-collapse-btn-text: $text-weak;
+$section-collapse-btn-text-hover: $text-weak-hover;
+$section-header-border-color: $text-disabled;

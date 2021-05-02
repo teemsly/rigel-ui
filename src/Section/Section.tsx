@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { CommonProps, useClassName, WithCustomElement } from "../utils";
+import { AnyProps, CommonProps, useClassName } from "../utils";
 
-export interface SectionProps extends CommonProps, WithCustomElement {
+export interface SectionProps extends CommonProps, AnyProps {
   /** The collapsible body of the section */
   collapsible?: boolean;
   /** On collapse event callback  */

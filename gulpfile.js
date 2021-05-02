@@ -41,7 +41,7 @@ function cleanStyleDir(done) {
 // Compile style to css
 function buildScss() {
   return gulp
-    .src(`${STYLE_RESOURCE}/themes/default.scss`)
+    .src(`${STYLE_RESOURCE}/themes/rigel-default.scss`)
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(CSS_DIR));
 }
@@ -49,7 +49,7 @@ function buildScss() {
 /** Build CSS for production */
 function buildCss() {
   return gulp
-    .src(`${STYLE_RESOURCE}/themes/default.scss`)
+    .src(`${STYLE_RESOURCE}/themes/rigel-default.scss`)
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(rename({ suffix: ".min" }))

@@ -1,0 +1,96 @@
+.#{$class-prefix}section {
+  background-color: $color-white;
+  width: 500px;
+
+  &.#{$class-prefix}section-collapsible {
+    .#{$class-prefix}section-header {
+      .#{$class-prefix}section-heading,
+      .#{$class-prefix}section-custom-heading {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .#{$class-prefix}section-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    border-bottom: 2px solid
+      lighten($color: $section-header-border-color, $amount: 25);
+
+    .#{$class-prefix}section-collapse {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: $border-radius;
+      margin-right: 6px;
+      position: relative;
+      transition-duration: 0.3s;
+
+      &::after {
+        content: " ";
+        border-width: 6px;
+        border-style: solid;
+        border-radius: 1px;
+        position: absolute;
+        top: 11px;
+        border-color: $section-collapse-btn-text transparent transparent
+          transparent;
+      }
+
+      &:hover {
+        background: #eeee;
+
+        &::after {
+          border-color: $section-collapse-btn-text-hover transparent transparent
+            transparent;
+        }
+      }
+    }
+    .#{$class-prefix}section-heading {
+      .#{$class-prefix}section-heading-content {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        line-height: normal;
+        display: inline-block;
+      }
+    }
+    .#{$class-prefix}section-heading,
+    .#{$class-prefix}section-custom-heading {
+      margin: 0;
+      flex: 1 1 auto;
+      min-width: 1px;
+    }
+  }
+
+  &.#{$class-prefix}section-collpased {
+    .#{$class-prefix}section-collapse {
+      &::after {
+        top: 7px;
+        left: 40%;
+        border-color: transparent transparent transparent
+          $section-collapse-btn-text !important;
+      }
+
+      &:hover {
+        &::after {
+          border-color: transparent transparent transparent
+            $section-collapse-btn-text-hover !important;
+        }
+      }
+    }
+
+    .#{$class-prefix}section-body {
+      display: none;
+    }
+  }
+
+  .#{$class-prefix}section-body {
+    padding-top: 8px;
+  }
+}

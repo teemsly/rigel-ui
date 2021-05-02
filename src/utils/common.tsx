@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface CommonProps {
   /** The child of the component */
   children?: React.ReactNode;
@@ -12,7 +14,11 @@ export interface AnyProps {
   [key: string]: any;
 }
 
-export interface WithCustomElement {
+// export interface WithComponentAs<As extends React.ElementType | string = React.ElementType> extends CommonProps {
+
+export interface WithCustomElement<
+  As extends React.ElementType | string = React.ElementType
+> extends CommonProps {
   /** You can use custom element for this component */
-  customElement?: any;
+  customElement: As;
 }

@@ -8,7 +8,12 @@ const sourcemaps = require("gulp-sourcemaps");
 const rename = require("gulp-rename");
 
 // The component extension.
-const RESOURCE_EXTENSION = ["./src/**/*.tsx", "./src/**/*.ts"];
+const RESOURCE_EXTENSION = [
+  "./src/**/*.tsx",
+  "./src/**/*.ts",
+  "!./src/**/*.stories.tsx",
+  "!./src/**/*.stories.ts",
+];
 
 // Style resource extension.
 const STYLE_EXTENSION = ["./src/**/*.scss", "./src/**/*.sass"];

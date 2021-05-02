@@ -1,6 +1,6 @@
 .#{$class-prefix}section {
   background-color: $color-white;
-  width: 500px;
+  width: 100%;
 
   &.#{$class-prefix}section-collapsible {
     .#{$class-prefix}section-header {

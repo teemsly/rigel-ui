@@ -1,11 +1,10 @@
 import React from "react";
-import { CommonProps, AnyProps, useClassName, createComopnent } from "../utils";
-import createComponent from "../utils/createComponent";
+import { CommonProps, AnyProps, useClassName, createComponent } from "../utils";
 
 /**
  * Section Heading Component
  */
-const SectionHeading = createComopnent({
+const SectionHeading = createComponent({
   name: "SectionHeading",
   customElement: "div",
 });
@@ -13,7 +12,7 @@ const SectionHeading = createComopnent({
 /**
  * Section Heading Content Component
  */
-const SectionHeadingContent = createComopnent({
+const SectionHeadingContent = createComponent({
   name: "SectionHeadingContent",
   customElement: "div",
 });
@@ -21,7 +20,7 @@ const SectionHeadingContent = createComopnent({
 /**
  * Custom section heading element
  */
-const SectionCustomHeading = createComopnent({
+const SectionCustomHeading = createComponent({
   name: "SectionCustomHeading",
   customElement: "div",
 });

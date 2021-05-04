@@ -1,0 +1,65 @@
+.#{$class-prefix}full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+}
+
+.#{$class-prefix}full-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.#{$class-prefix}full-screen-header {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: $padding-right;
+  padding-left: $padding-left;
+  min-height: 60px;
+}
+
+.#{$class-prefix}full-screen-header-back,
+.#{$class-prefix}full-screen-header-close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: $text-weak;
+  transition-duration: 0.2s;
+
+  &:hover {
+    fill: $text-weak-hover;
+  }
+}
+
+.#{$class-prefix}full-screen-header-children {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.#{$class-prefix}full-screen-content {
+  flex: 1;
+  min-height: 1px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.#{$class-prefix}full-screen-header-shadow {
+  box-shadow: 0 1px 4px 0 rgba(23, 27, 36, 0.08);
+}
+
+.#{$class-prefix}full-screen-content-scrollable {
+  overflow: auto;
+}

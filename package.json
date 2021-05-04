@@ -1,6 +1,6 @@
 {
   "name": "teemsly-rigel-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React UI component library to support UI component on Rigel Framework or other React App.",
   "main": "dist/lib/index.js",
   "typings": "dist/es/index.js",

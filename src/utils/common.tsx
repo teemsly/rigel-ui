@@ -14,11 +14,21 @@ export interface AnyProps {
   [key: string]: any;
 }
 
-// export interface WithComponentAs<As extends React.ElementType | string = React.ElementType> extends CommonProps {
-
 export interface WithCustomElement<
   As extends React.ElementType | string = React.ElementType
 > extends CommonProps {
   /** You can use custom element for this component */
   customElement: As;
+}
+
+export declare namespace AttributeTypes {
+  type Colors =
+    | "default"
+    | "primary"
+    | "success"
+    | "info"
+    | "warning"
+    | "danger";
+  type Size = "xs" | "sm" | "md" | "lg" | "xl";
+  type Shape = "rectangle" | "rounded" | "semiCircle";
 }

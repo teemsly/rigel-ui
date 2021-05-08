@@ -1,18 +1,27 @@
 .#{$class-prefix}btn {
-  outline: none;
-  border: none;
-  cursor: pointer;
+  @include button-base();
 }
-
-// @each $key, $val in $spectrum {
-//   .#{$class-prefix}btn-#{$key} {
-//     @include generate-button-color($val, $color-white);
-//   }
-// }
 
 @each $color in $btn-colors {
   .#{$class-prefix}btn-#{$color} {
-    @include generate-button-color($color);
+    @include generate-button-color($color, false);
+  }
+}
+
+.#{$class-prefix}btn-link {
+  color: $color-primary-400;
+  background-color: transparent !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.#{$class-prefix}btn-outline {
+  @each $color in $btn-colors {
+    &.#{$class-prefix}btn-#{$color} {
+      @include generate-button-color($color, true);
+    }
   }
 }
 

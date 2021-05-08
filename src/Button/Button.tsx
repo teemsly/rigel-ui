@@ -7,11 +7,13 @@ export interface ButtonProps extends CommonProps, AnyProps {
   /** You can use custom element for this component */
   customElement?: React.ElementType;
   /** The color of the button */
-  colors?: AttributeTypes.Colors;
+  color?: AttributeTypes.Colors;
   /** Size of the button */
   size?: AttributeTypes.Size;
   /** Shape of the button */
   shape?: AttributeTypes.Shape;
+  /** Button appearance type */
+  appearance?: "default" | "link" | "outline";
   /** Loading indicator */
   loading?: boolean;
 }
@@ -21,16 +23,20 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     customElement: Component = "button",
     className,
     children,
-    colors,
+    color,
     size,
+    appearance,
     shape,
+    loading,
     ...rest
   } = props;
 
   const { mergeClassName, addClassNames } = useClassName("btn");
   const classes = mergeClassName(
     className,
-    addClassNames(colors, size, _.kebabCase(shape))
+    addClassNames(appearance, color, size, _.kebabCase(shape), {
+      loading,
+    })
   );
 
   return (
@@ -43,7 +49,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 Button.displayName = "Button";
 
 Button.propTypes = {
-  colors: PropTypes.oneOf<AttributeTypes.Colors>([
+  color: PropTypes.oneOf<AttributeTypes.Colors>([
     "default",
     "primary",
     "success",
@@ -58,14 +64,16 @@ Button.propTypes = {
     "semiCircle",
   ]),
   loading: PropTypes.bool,
+  appearance: PropTypes.oneOf(["default", "link", "outline"]),
 };
 
 Button.defaultProps = {
-  colors: "default",
+  color: "default",
   size: "md",
   shape: "rectangle",
   customElement: "button",
   loading: false,
+  appearance: "default",
 };
 
 export default Button;

@@ -1,0 +1,42 @@
+.#{$class-prefix}loader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.#{$class-prefix}loader-indicator {
+  width: 16px;
+  height: 16px;
+  border: 3px solid lighten($color: $color-grey-100, $amount: 20);
+  border-radius: 50%;
+  border-top: 3px solid $color-primary-300;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+.#{$class-prefix}loader-text {
+  margin-top: 8px;
+  color: $text-weak;
+  font-size: 13px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

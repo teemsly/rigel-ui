@@ -1,0 +1,35 @@
+.#{$class-prefix}btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+// @each $key, $val in $spectrum {
+//   .#{$class-prefix}btn-#{$key} {
+//     @include generate-button-color($val, $color-white);
+//   }
+// }
+
+@each $color in $btn-colors {
+  .#{$class-prefix}btn-#{$color} {
+    @include generate-button-color($color);
+  }
+}
+
+@each $size in $btn-size {
+  .#{$class-prefix}btn-#{$size} {
+    @include generate-button-size($size);
+  }
+}
+
+.#{$class-prefix}btn-rounded {
+  @include rounded($border-radius);
+}
+
+.#{$class-prefix}btn-semi-circle {
+  @include semi-circle();
+}
+
+.#{$class-prefix}btn-rectangle {
+  @include rectangle();
+}

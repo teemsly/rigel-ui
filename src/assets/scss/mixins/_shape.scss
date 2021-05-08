@@ -1,0 +1,11 @@
+@mixin rectangle {
+  border-radius: 0;
+}
+
+@mixin rounded($radius) {
+  border-radius: $radius;
+}
+
+@mixin semi-circle() {
+  border-radius: 30px;
+}

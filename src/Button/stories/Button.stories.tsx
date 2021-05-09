@@ -67,19 +67,44 @@ export const ButtonSize = Size.bind({
 
 const Outline: Story<ButtonProps> = (args) => (
   <div>
-    <Button style={{ margin: "0 12px" }} {...args} color="primary">
+    <Button
+      style={{ margin: "0 12px" }}
+      {...args}
+      appearance="outline"
+      color="primary"
+    >
       Button
     </Button>
-    <Button style={{ margin: "0 12px" }} {...args} color="success">
+    <Button
+      style={{ margin: "0 12px" }}
+      {...args}
+      appearance="outline"
+      color="success"
+    >
       Button
     </Button>
-    <Button style={{ margin: "0 12px" }} {...args} color="info">
+    <Button
+      style={{ margin: "0 12px" }}
+      {...args}
+      appearance="outline"
+      color="info"
+    >
       Button
     </Button>
-    <Button style={{ margin: "0 12px" }} {...args} color="warning">
+    <Button
+      style={{ margin: "0 12px" }}
+      {...args}
+      appearance="outline"
+      color="warning"
+    >
       Button
     </Button>
-    <Button style={{ margin: "0 12px" }} {...args} color="danger">
+    <Button
+      style={{ margin: "0 12px" }}
+      {...args}
+      appearance="outline"
+      color="danger"
+    >
       Button
     </Button>
   </div>

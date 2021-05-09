@@ -22,13 +22,7 @@ export interface WithCustomElement<
 }
 
 export declare namespace AttributeTypes {
-  type Colors =
-    | "default"
-    | "primary"
-    | "success"
-    | "info"
-    | "warning"
-    | "danger";
+  type Colors = "primary" | "success" | "info" | "warning" | "danger";
   type Size = "xs" | "sm" | "md" | "lg" | "xl";
   type Shape = "rectangle" | "rounded" | "semiCircle";
 }

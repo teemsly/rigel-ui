@@ -1,36 +1,55 @@
+// Button base style
 .#{$class-prefix}btn {
   @include button-base();
 }
 
+// Generate color button
 @each $color in $btn-colors {
   .#{$class-prefix}btn-#{$color} {
-    @include generate-button-color($color, false);
+    @include generate-button-color($color);
   }
 }
 
+// Button link
 .#{$class-prefix}btn-link {
   color: $color-primary-400;
   background-color: transparent !important;
 
   &:hover {
+    color: $color-primary-400;
     text-decoration: underline;
   }
 }
 
+// Button outline
 .#{$class-prefix}btn-outline {
   @each $color in $btn-colors {
     &.#{$class-prefix}btn-#{$color} {
-      @include generate-button-color($color, true);
+      @include generate-button-outline($color);
     }
   }
 }
 
+// Button subtle;
+.#{$class-prefix}btn-subtle {
+  background-color: $btn-subtle-bg;
+  color: $btn-subtle-color;
+
+  &:focus,
+  &:hover {
+    color: $btn-subtle-color-hover;
+    background-color: $btn-subtle-bg-hover;
+  }
+}
+
+// Button sizes
 @each $size in $btn-size {
   .#{$class-prefix}btn-#{$size} {
     @include generate-button-size($size);
   }
 }
 
+// Shape of the button
 .#{$class-prefix}btn-rounded {
   @include rounded($border-radius);
 }

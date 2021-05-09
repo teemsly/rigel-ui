@@ -13,7 +13,7 @@ export interface ButtonProps extends CommonProps, AnyProps {
   /** Shape of the button */
   shape?: AttributeTypes.Shape;
   /** Button appearance type */
-  appearance?: "default" | "link" | "outline";
+  appearance?: "default" | "link" | "outline" | "subtle";
   /** Loading indicator */
   loading?: boolean;
 }
@@ -50,7 +50,6 @@ Button.displayName = "Button";
 
 Button.propTypes = {
   color: PropTypes.oneOf<AttributeTypes.Colors>([
-    "default",
     "primary",
     "success",
     "info",
@@ -64,11 +63,10 @@ Button.propTypes = {
     "semiCircle",
   ]),
   loading: PropTypes.bool,
-  appearance: PropTypes.oneOf(["default", "link", "outline"]),
+  appearance: PropTypes.oneOf(["default", "link", "outline", "subtle"]),
 };
 
 Button.defaultProps = {
-  color: "default",
   size: "md",
   shape: "rectangle",
   customElement: "button",

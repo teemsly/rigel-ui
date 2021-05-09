@@ -10,6 +10,32 @@ export default {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    color: {
+      control: {
+        type: "select",
+        options: ["primary", "info", "success", "warning", "danger"],
+      },
+    },
+    shape: {
+      control: {
+        type: "radio",
+        options: ["rectangle", "rounded", "semiCircle"],
+      },
+    },
+    size: {
+      control: {
+        type: "select",
+        options: ["xs", "sm", "md", "lg", "xl"],
+      },
+    },
+    appearance: {
+      control: {
+        type: "radio",
+        options: ["subtle", "link", "default", "outline"],
+      },
+    },
+  },
 } as Meta;
 
 const Basic: Story<ButtonProps> = (args) => <Button {...args}>Button</Button>;
@@ -37,4 +63,27 @@ const Size: Story<ButtonProps> = (args) => (
 );
 export const ButtonSize = Size.bind({
   color: "primary",
+});
+
+const Outline: Story<ButtonProps> = (args) => (
+  <div>
+    <Button style={{ margin: "0 12px" }} {...args} color="primary">
+      Button
+    </Button>
+    <Button style={{ margin: "0 12px" }} {...args} color="success">
+      Button
+    </Button>
+    <Button style={{ margin: "0 12px" }} {...args} color="info">
+      Button
+    </Button>
+    <Button style={{ margin: "0 12px" }} {...args} color="warning">
+      Button
+    </Button>
+    <Button style={{ margin: "0 12px" }} {...args} color="danger">
+      Button
+    </Button>
+  </div>
+);
+export const ButtonOutline = Outline.bind({
+  appearance: "outline",
 });

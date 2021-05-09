@@ -7,13 +7,7 @@
 }
 
 .#{$class-prefix}loader-indicator {
-  width: 16px;
-  height: 16px;
-  border: 3px solid lighten($color: $color-grey-100, $amount: 20);
-  border-radius: 50%;
-  border-top: 3px solid $color-primary-300;
-  -webkit-animation: spin 1s linear infinite; /* Safari */
-  animation: spin 1s linear infinite;
+  @include set-loader($color-primary-300, $color-grey-100);
 }
 
 .#{$class-prefix}loader-text {

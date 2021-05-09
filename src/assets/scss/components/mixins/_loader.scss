@@ -1,0 +1,17 @@
+@mixin set-loader-size($loader-size) {
+  height: $loader-size !important;
+  width: $loader-size !important;
+}
+
+@mixin set-loader(
+  $loader-color: $color-primary-300,
+  $bg-color: $color-grey-100
+) {
+  width: 16px;
+  height: 16px;
+  border: 3px solid lighten($color: $bg-color, $amount: 20);
+  border-radius: 50%;
+  border-top: 3px solid $loader-color;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}

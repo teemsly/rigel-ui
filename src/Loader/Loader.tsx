@@ -33,7 +33,7 @@ const Loader: React.FC<LoaderProps> = (props: LoaderProps) => {
   return (
     <div className={classes} {...rest}>
       <LoaderIndicator />
-      <LoaderText>{placeholder}</LoaderText>
+      {placeholder && <LoaderText>{placeholder}</LoaderText>}
     </div>
   );
 };

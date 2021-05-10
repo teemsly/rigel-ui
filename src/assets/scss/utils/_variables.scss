@@ -156,3 +156,33 @@ $tile-bg-hover: #f9f9f9;
 $tile-child-border-color: rgb(220, 225, 228);
 $tile-title-color: $text;
 $tile-subtitle-color: $text-weak;
+
+// -------------------------
+//  Typography
+// -------------------------
+// Text
+$text-colors: (
+  "muted": $text-weak,
+  "primary": $color-primary,
+  "info": $color-info,
+  "success": $color-success,
+  "warning": $color-warning,
+  "danger": $color-danger,
+);
+
+// Heading
+$h1-font-size: 32px;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 18px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+$heading-line-height: (
+  "h1": 32px,
+  "h2": 32px,
+  "h3": 32px,
+  "h4": 32px,
+  "h5": 32px,
+  "h6": 32px,
+);

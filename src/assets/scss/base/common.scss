@@ -1,7 +1,48 @@
 @import "../utils/variables";
+@import "./normalize";
 
 html,
 body {
   font-family: $font-family;
   font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  margin-bottom: 18px;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  margin-bottom: 16px;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  margin-bottom: 12px;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  margin-bottom: 8px;
 }

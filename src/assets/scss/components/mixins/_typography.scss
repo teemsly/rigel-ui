@@ -1,0 +1,4 @@
+@mixin generate-text-colors($color) {
+  $color: map-get($text-colors, $color);
+  color: $color;
+}

@@ -3,6 +3,7 @@ export { default as FullScreen } from "./FullScreen";
 export { default as Loader } from "./Loader";
 export { default as Section } from "./Section";
 export { default as Tile } from "./Tile";
+export * from "./Typography";
 
 // The type of components
 export type { ButtonProps } from "./Button";

@@ -1,0 +1,5 @@
+@each $type, $color in $text-colors {
+  .#{$class-prefix}text-#{$type} {
+    @include generate-text-colors($type);
+  }
+}

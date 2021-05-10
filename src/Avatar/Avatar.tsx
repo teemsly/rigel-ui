@@ -37,8 +37,6 @@ const Avatar: React.FC<AvatarProps> = (props: AvatarProps) => {
     backgroundImage: `url(${src})`,
   };
 
-  console.log(src);
-
   if (src) {
     childElement = (
       <div className={setPrefix("image")} style={avatarImageStyles}></div>

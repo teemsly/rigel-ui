@@ -1,0 +1,45 @@
+.#{$class-prefix}avatar {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  background-color: $color-grey;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $color in $color-types {
+  .#{$class-prefix}avatar-#{$color} {
+    @include generate-avatar-color($color);
+  }
+}
+
+@each $size in $global-size-types {
+  .#{$class-prefix}avatar-#{$size} {
+    @include generate-avatar-size($size);
+  }
+}
+
+.#{$class-prefix}avatar-image {
+  width: 100%;
+  height: 100%;
+  background: center/cover $color-grey;
+}
+
+.#{$class-prefix}avatar-circle {
+  border-radius: 100%;
+}
+
+.#{$class-prefix}avatar-rounded {
+  border-radius: $border-radius;
+}
+
+.#{$class-prefix}avatar-square {
+  border-radius: 0;
+}

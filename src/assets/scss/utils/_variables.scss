@@ -59,7 +59,10 @@ $spectrum: (
   "danger": $color-danger,
 );
 
+$color-types: ("primary", "success", "info", "warning", "danger");
+
 // Size
+$global-size-types: ("xs", "sm", "md", "lg", "xl");
 $global-size: xs, sm, md, lg, xl;
 
 // Padding
@@ -73,6 +76,32 @@ $padding-y: 24px;
 
 // Border Radius
 $border-radius: 6px;
+
+// Avatar Variable Component
+$avatar-default-bg: $color-grey;
+$avatar-colors: (
+  "primary": $color-primary,
+  "success": $color-success,
+  "info": $color-info,
+  "warning": $color-warning,
+  "danger": $color-danger,
+);
+
+$avatar-size: (
+  "xs": 24px,
+  "sm": 28px,
+  "md": 36px,
+  "lg": 42px,
+  "xl": 48px,
+);
+
+$avatar-font-size: (
+  "xs": 10px,
+  "sm": 13px,
+  "md": 14px,
+  "lg": 16px,
+  "xl": 18px,
+);
 
 // Buttons
 $btn-default-bg: $color-grey-400;

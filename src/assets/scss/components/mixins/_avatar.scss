@@ -1,0 +1,16 @@
+// Generate avatar color
+@mixin generate-avatar-color($bg-color) {
+  color: $color-white;
+  background-color: map-get($avatar-colors, $bg-color);
+}
+
+// Generate avatar size
+@mixin generate-avatar-size($size) {
+  $avatar-size: map-get($avatar-size, $size);
+  $font-size: map-get($avatar-font-size, $size);
+
+  width: $avatar-size;
+  height: $avatar-size;
+  font-size: $font-size;
+  line-height: $avatar-size;
+}

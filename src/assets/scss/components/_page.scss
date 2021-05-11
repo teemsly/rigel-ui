@@ -1,0 +1,22 @@
+.#{$class-prefix}page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.#{$class-prefix}page-main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.#{$class-prefix}page-main-layer {
+  display: flex;
+  flex: 1 1 0;
+  min-height: 1px;
+}

@@ -17,7 +17,8 @@
     "dev:style": "gulp devStyle",
     "build": "gulp build",
     "docs:dev": "start-storybook -p 6006",
-    "docs:build": "build-storybook"
+    "docs:build": "build-storybook",
+    "build:icons": "npx @svgr/cli --out-dir ./src/Icons ./src/assets/icons --typescript"
   },
   "repository": {
     "type": "git",

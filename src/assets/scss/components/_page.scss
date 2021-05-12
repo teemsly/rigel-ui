@@ -7,6 +7,20 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  &.#{$class-prefix}page-sidebar-minimized {
+    .#{$class-prefix}sidebar {
+      margin-left: -240px;
+    }
+
+    .#{$class-prefix}sidebar-expander {
+      display: flex;
+    }
+  }
+
+  .#{$class-prefix}sidebar-expander {
+    display: none;
+  }
 }
 
 .#{$class-prefix}page-main {

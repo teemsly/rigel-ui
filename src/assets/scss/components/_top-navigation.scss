@@ -1,0 +1,32 @@
+.#{$class-prefix}top-navigation {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  flex-shrink: 0;
+  padding: 0 24px;
+
+  &.#{$class-prefix}top-navigation-shadow {
+    box-shadow: rgba(21, 27, 38, 0.08) 0px 1px 4px 0px;
+  }
+}
+
+.#{$class-prefix}sidebar-expander {
+  width: 32px;
+  height: 32px;
+  margin-right: $padding-right/2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
+  transition: 0.3s;
+
+  svg {
+    width: 28px;
+    fill: $text;
+  }
+
+  &:hover {
+    background-color: $color-grey-400;
+  }
+}

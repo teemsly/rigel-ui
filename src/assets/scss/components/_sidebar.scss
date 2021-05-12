@@ -1,0 +1,75 @@
+.#{$class-prefix}sidebar {
+  display: flex;
+  flex: 1 1 content;
+  flex-direction: column;
+  min-height: 1px;
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  color: $sidebar-color;
+  transition: margin-left 250ms ease-out 0s, transform 250ms ease-out 0s;
+
+  &:hover .#{$class-prefix}sidebar-content-scrollable {
+    &::-webkit-scrollbar-thumb {
+      display: block;
+    }
+  }
+}
+
+.#{$class-prefix}sidebar-header {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $padding-x;
+}
+
+.#{$class-prefix}sidebar-content {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+
+.#{$class-prefix}sidebar-content-scrollable {
+  position: absolute;
+  inset: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+  }
+}
+
+.#{$class-prefix}sidebar-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$class-prefix}sidebar-minimizer {
+  cursor: pointer;
+  color: $sidebar-color;
+  fill: $sidebar-color;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-white;
+    fill: $color-white;
+  }
+
+  svg {
+    width: 20px;
+  }
+}

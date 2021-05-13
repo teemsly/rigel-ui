@@ -1,0 +1,82 @@
+.#{$class-prefix}nav {
+  display: flex;
+  align-items: center;
+}
+
+.#{$class-prefix}nav-item {
+  color: $nav-default-color;
+  cursor: pointer;
+  margin: 0 6px;
+
+  a {
+    padding: 8px 12px;
+    color: $nav-default-color;
+    text-decoration: none;
+    display: block;
+    border-radius: $border-radius;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: $nav-default-bg-hover;
+    }
+  }
+}
+
+.#{$class-prefix}nav-item-active {
+  a {
+    background-color: $nav-default-bg-active;
+
+    &:hover {
+      background-color: $nav-default-bg-active;
+    }
+  }
+}
+
+.#{$class-prefix}nav-subtle {
+  .#{$class-prefix}nav-item {
+    position: relative;
+
+    a {
+      position: relative;
+      color: $nav-subtle-color;
+      background-color: transparent;
+      font-weight: 600;
+      padding-bottom: 10px;
+      padding-right: 4px;
+      padding-left: 4px;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: transparent;
+        left: 4px;
+        right: 4px;
+      }
+
+      &:hover {
+        color: $nav-subtle-color-hover;
+        &::after {
+          background-color: $color-grey;
+        }
+      }
+    }
+  }
+
+  .#{$class-prefix}nav-item-active {
+    a {
+      color: $nav-subtle-color-hover;
+
+      &::after {
+        background-color: $color-primary-300;
+      }
+
+      &:hover {
+        &::after {
+          background-color: $color-primary-300;
+        }
+      }
+    }
+  }
+}

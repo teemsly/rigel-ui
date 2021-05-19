@@ -3,6 +3,8 @@ import { Anchor } from "..";
 import { CommonProps, useClassName } from "../utils";
 
 export interface NavItemProps extends CommonProps {
+  /** You can use custom element for this component */
+  customElement?: React.ElementType;
   /** Hyperlink to the specified url. */
   href?: string;
   /** The event key of the option*/
@@ -12,14 +14,21 @@ export interface NavItemProps extends CommonProps {
 }
 
 const NavItem = React.forwardRef((props: NavItemProps, ref) => {
-  const { children, className, href, active, ...rest } = props;
+  const {
+    customElement: Component = Anchor,
+    children,
+    className,
+    href,
+    active,
+    ...rest
+  } = props;
 
   const { mergeClassName, addClassNames } = useClassName("nav-item");
   const classes = mergeClassName(className, addClassNames({ active }));
 
-  let itemElement = children;
+  let itemElement = <Component>{children}</Component>;
   if (href) {
-    itemElement = <Anchor href={href}>{children}</Anchor>;
+    itemElement = <Component href={href}>{children}</Component>;
   }
 
   return (

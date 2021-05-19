@@ -1,6 +1,7 @@
 export { default as Anchor } from "./Anchor";
 export { default as Avatar } from "./Avatar";
 export { default as Button } from "./Button";
+export { default as Card } from "./Card";
 export { default as Content } from "./Content";
 export { default as Dropdown } from "./Dropdown";
 export { default as FullScreen } from "./FullScreen";
@@ -18,6 +19,7 @@ export * from "./Typography";
 export type { AnchorProps } from "./Anchor";
 export type { AvatarProps } from "./Avatar";
 export type { ButtonProps } from "./Button";
+export type { CardProps } from "./Card";
 export type { DropdownProps } from "./Dropdown";
 export type { FullScreenProps } from "./FullScreen";
 export type { HeaderProps } from "./Header";

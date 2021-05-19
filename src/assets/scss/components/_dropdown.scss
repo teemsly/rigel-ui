@@ -1,0 +1,115 @@
+.#{$class-prefix}dropdown {
+  position: relative;
+
+  &.#{$class-prefix}dropdown-open {
+    .#{$class-prefix}dropdown-toggle {
+      background-color: $color-grey;
+    }
+    .#{$class-prefix}dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.#{$class-prefix}dropdown-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  min-height: 36px;
+  border-radius: $border-radius;
+  padding: 0 12px;
+  background-color: $color-grey-300;
+}
+
+.#{$class-prefix}dropdown-menu {
+  position: absolute;
+  min-width: 185px;
+  display: none;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px rgba(111, 119, 130, 0.15),
+    0 5px 20px 0 rgba(21, 27, 38, 0.08);
+}
+
+.#{$class-prefix}dropdown-divider {
+  min-height: 1px;
+  margin: 6px 0;
+  background-color: $color-grey;
+}
+
+.#{$class-prefix}dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 12px;
+  min-height: 36px;
+  color: $text-deprecated;
+
+  &:hover {
+    background-color: $color-grey-200;
+  }
+}
+
+.#{$class-prefix}dropdown-menu-item-active {
+  background-color: $color-grey;
+
+  &:hover {
+    background-color: $color-grey;
+  }
+}
+
+// Placement of the dropdown menu
+.#{$class-prefix}dropdown-bottom-start {
+  .#{$class-prefix}dropdown-menu {
+    left: 0;
+    right: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-bottom-end {
+  .#{$class-prefix}dropdown-menu {
+    right: 0;
+  }
+}
+
+.#{$class-prefix}dropdown-top-start {
+  .#{$class-prefix}dropdown-menu {
+    left: 0;
+    bottom: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-top-end {
+  .#{$class-prefix}dropdown-menu {
+    right: 0;
+    bottom: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-left-start {
+  .#{$class-prefix}dropdown-menu {
+    top: 0;
+    right: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-left-end {
+  .#{$class-prefix}dropdown-menu {
+    bottom: 0;
+    right: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-right-start {
+  .#{$class-prefix}dropdown-menu {
+    top: 0;
+    left: 100%;
+  }
+}
+
+.#{$class-prefix}dropdown-right-end {
+  .#{$class-prefix}dropdown-menu {
+    bottom: 0;
+    left: 100%;
+  }
+}

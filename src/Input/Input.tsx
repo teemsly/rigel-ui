@@ -1,17 +1,21 @@
 import React, { HTMLAttributes, useContext } from "react";
+import { FormGroupContext } from "../FormGroup";
 import { InputGroupContext } from "../InputGroup";
 import {
   AnyProps,
   CommonProps,
   createChainedFunction,
+  FormBaseProps,
   useClassName,
 } from "../utils";
 
 export interface InputProps
   extends CommonProps,
     HTMLAttributes<HTMLInputElement>,
+    FormBaseProps<number | string | ReadonlyArray<string>>,
     AnyProps {
   invalid?: boolean;
+  id?: string;
 }
 
 const Input: React.FC<InputProps> = (props: InputProps) => {
@@ -23,13 +27,19 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
     readOnly,
     onFocus,
     onBlur,
+    id,
     ...rest
   } = props;
 
   const inputGroupContext = useContext(InputGroupContext);
 
+  const { controlId, isInvalid } = useContext(FormGroupContext);
+
   const { mergeClassName, addClassNames } = useClassName("input");
-  const classes = mergeClassName(className, addClassNames({ invalid }));
+  const classes = mergeClassName(
+    className,
+    addClassNames({ invalid: invalid || isInvalid })
+  );
 
   const eventProps: HTMLAttributes<HTMLInputElement> = {};
 
@@ -51,6 +61,7 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
       className={classes}
       disabled={disabled}
       readOnly={readOnly}
+      id={id || controlId}
       {...rest}
       {...eventProps}
     />

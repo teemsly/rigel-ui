@@ -21,6 +21,17 @@ export interface WithCustomElement<
   customElement: As;
 }
 
+export interface FormBaseProps<ValueType = any> {
+  /** Initial value of the filed. */
+  defaultValue?: ValueType;
+  /** Current value of the field, used for controlled component.  */
+  value?: ValueType;
+  /** Set the field to be disabled and cannot be use any event */
+  disabled?: boolean;
+  /** Set the field to be readonly */
+  readOnly?: boolean;
+}
+
 export declare namespace AttributeTypes {
   type Colors = "primary" | "success" | "info" | "warning" | "danger";
   type Size = "xs" | "sm" | "md" | "lg" | "xl";

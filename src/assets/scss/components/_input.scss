@@ -1,0 +1,14 @@
+@import "./mixins/input";
+
+.#{$class-prefix}input {
+  @include field-base();
+  @include field-border();
+  @include field-default();
+}
+
+.#{$class-prefix}input-invalid {
+  border-color: $input-error-border;
+  &:focus {
+    border-color: $input-error-border-focus;
+  }
+}

@@ -1,0 +1,45 @@
+@import "./mixins/input";
+
+.#{$class-prefix}input-group {
+  @include field-base;
+  @include field-default;
+  @include field-border;
+  height: 34px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+
+  .#{$class-prefix}input {
+    height: 20px;
+    border: none !important;
+  }
+
+  .#{$class-prefix}input-group-addon:first-child {
+    border-top-left-radius: $input-default-border-radius;
+    border-bottom-left-radius: $input-default-border-radius;
+  }
+  .#{$class-prefix}input-group-addon:last-child {
+    border-top-right-radius: $input-default-border-radius;
+    border-bottom-right-radius: $input-default-border-radius;
+  }
+}
+
+.#{$class-prefix}input-group-invalid {
+  border-color: $input-error-border !important;
+
+  &:focus {
+    border-color: $input-error-border-focus !important;
+  }
+}
+
+.#{$class-prefix}input-group-focus {
+  border-color: $input-default-focus-border-color;
+}
+
+.#{$class-prefix}input-group-addon {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  background-color: $input-group-addon-bg;
+}

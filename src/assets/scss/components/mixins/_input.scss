@@ -1,0 +1,24 @@
+@mixin field-base {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: $input-background;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin field-border {
+  border: $input-border-default;
+}
+
+@mixin field-default {
+  height: $input-default-height;
+  padding: $input-default-padding-vertical $input-default-padding-horizontal;
+  line-height: $input-default-line-height;
+  border-radius: $input-default-border-radius;
+
+  &:focus {
+    border-color: $input-default-focus-border-color;
+  }
+}

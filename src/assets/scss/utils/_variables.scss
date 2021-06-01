@@ -191,3 +191,20 @@ $nav-default-bg-active: $color-grey;
 
 $nav-subtle-color: $text-weak;
 $nav-subtle-color-hover: $text-weak-hover;
+
+// Data entry
+$input-background: $color-white;
+$input-border-default: 1px solid #cbd4db;
+$input-error-border: $color-danger-300;
+$input-error-border-focus: $color-danger;
+
+// Input default
+$input-default-height: 26px;
+$input-default-padding-vertical: 4px;
+$input-default-padding-horizontal: 12px;
+$input-default-line-height: 22px;
+$input-default-border-radius: $border-radius;
+$input-default-focus-border-color: #9ca6af;
+
+// Input group addon
+$input-group-addon-bg: $color-grey-300;

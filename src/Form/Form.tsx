@@ -3,13 +3,15 @@ import { CommonProps, useClassName } from "../utils";
 
 export interface FormProps
   extends CommonProps,
-    HTMLAttributes<HTMLFormElement> {}
+    HTMLAttributes<HTMLFormElement> {
+  layout?: "horizontal" | "vertical";
+}
 
 const Form: React.FC<FormProps> = (props: FormProps) => {
-  const { children, className, ...rest } = props;
+  const { children, className, layout, ...rest } = props;
 
   const { mergeClassName, addClassNames } = useClassName("form");
-  const classes = mergeClassName(className, addClassNames());
+  const classes = mergeClassName(className, addClassNames(layout));
 
   return (
     <form className={classes} {...rest}>

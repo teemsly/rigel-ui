@@ -1,0 +1,8 @@
+@import "./form-control-label";
+@import "./form-group";
+
+.#{$class-prefix}form-error-message {
+  font-size: 13px;
+  margin-top: 4px;
+  color: $color-danger;
+}
